@@ -23,12 +23,12 @@ def create_plot():
 
     data = [
         go.Bar(
-            x=df['x']
+            x=df['x'],
             y=df['y']
         )
     ]
 
-    graphJSON = json.dumps(data, cls=plotly.utils.JSONEncoder)
+    graphJSON = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
 
     return graphJSON
 
